@@ -23,7 +23,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-
+  //кнопку удаление я попросил у ии ai-genreated 
+  const deleteTask = (id: number) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
 
   const getFiltered = () => {
     return tasks.filter((task) => {
@@ -109,6 +112,9 @@ function App() {
         {getFiltered().map((task) => (
           <li key={task.id}>
             {task.title} — <strong>{task.completed}</strong>
+            <button
+            onClick={() => deleteTask(task.id)}
+            >Удалитьы</button>
           </li>
         ))}
       </ul>
