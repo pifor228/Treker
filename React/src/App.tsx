@@ -90,7 +90,7 @@ function App() {
 
       <button className={styles.cgr} onClick={resetFilters}>Сбросить</button>
 
-      <h1 className={styles.cgr}>Создать привычку</h1>
+      <h1 className={styles.title}>Создать привычку</h1>
 
       <form onSubmit={handleAddTask}>
         <input className={styles.cgr}
@@ -107,13 +107,13 @@ function App() {
           <option value="Выполненно">Выполненно</option>
           <option value="Не выполненно">Не выполненно</option>
         </select>
-        <button className={styles.cgr} type="submit">Сохранить</button>
+        <button className={styles.saveButton} type="submit">Сохранить</button>
       </form>
       <ul>
         {getFiltered().map((task) => (
           <li key={task.id}>
             {task.title} — <strong>{task.completed}</strong>
-            <button className={styles.cgr}
+            <button className={styles.deleteButton}
             onClick={() => deleteTask(task.id)}
             >Удалить</button>
           </li>

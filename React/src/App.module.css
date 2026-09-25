@@ -198,17 +198,23 @@
 
 .text {
   margin: 0;
-  color: #ffc400;
+  color: #0011ff;
 }
 
 .deleteButton {
   margin: 0 0 8px;
-  color: #750000
+  padding: 10px;
+  border-radius: 100px;
+  background: #ff0000;
+  border: 3px solid #0177ff;
 }
 
 .saveButton {
   margin: 0 0 8px;
-  color: yellow
+  padding: 10px;
+  border-radius: 100px;
+  background: #ffd900;
+  border: 3px solid #0177ff;
 }
 
 
