@@ -1,4 +1,5 @@
-// import styles from'./App.css'
+import styles from "./App.module.css";
+
 
 import { useEffect, useState, type FormEvent } from "react";
 
@@ -71,14 +72,14 @@ function App() {
   return (
     <div>
 
-      <input
+      <input className={styles.cgr}
         type="text"
         placeholder="Поиск привычек"
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
 
-      <select
+      <select className={styles.cgr}
         value={searchcomp}
         onChange={(event) => setSearchComp(event.target.value)}
       >
@@ -87,18 +88,18 @@ function App() {
         <option value="Не выполненно">Не выполненно</option>
       </select>
 
-      <button onClick={resetFilters}>Сбросить</button>
+      <button className={styles.cgr} onClick={resetFilters}>Сбросить</button>
 
-      <h1>Создать привычку</h1>
+      <h1 className={styles.cgr}>Создать привычку</h1>
 
       <form onSubmit={handleAddTask}>
-        <input
+        <input className={styles.cgr}
           type="text"
           value={text}
           onChange={(event) => setText(event.target.value)}
           placeholder="Введите свою привычку"
         />
-        <select
+        <select className={styles.cgr}
           value={comp}
           onChange={(event) => setComp(event.target.value)}
         >
@@ -106,15 +107,15 @@ function App() {
           <option value="Выполненно">Выполненно</option>
           <option value="Не выполненно">Не выполненно</option>
         </select>
-        <button type="submit">Сохранить</button>
+        <button className={styles.cgr} type="submit">Сохранить</button>
       </form>
       <ul>
         {getFiltered().map((task) => (
           <li key={task.id}>
             {task.title} — <strong>{task.completed}</strong>
-            <button
+            <button className={styles.cgr}
             onClick={() => deleteTask(task.id)}
-            >Удалитьы</button>
+            >Удалить</button>
           </li>
         ))}
       </ul>

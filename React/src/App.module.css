@@ -183,7 +183,8 @@
   }
 } */
 
-/* .crrd {
+
+.crrd {
   padding: 10px;
   border-radius: 10000px;
   background: #000000;
@@ -222,4 +223,27 @@
 .text {
   margin: 0;
   color: #ffffff;
-} */
+}
+
+
+
+
+.light {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.dark {
+  background-color: #222;
+  color: white;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+}
